@@ -1,0 +1,8 @@
+Pada project ini adalah aplikasi medpoint berbasis "Web" yang diakses oleh admin superadmin dan dokter
+dan bertujuan untuk mempermudah proses management reservasi secara online. 
+
+
+teknologi yang digunakan :
+# React Framework
+# Language TypeScript 
+# Vite
