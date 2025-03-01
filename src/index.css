@@ -1,68 +1,244 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: #f0f2f5;
+}
+
+.login-container {
+  display: flex;
+  width: 100%; /* Lebar container diperlebar */
+  max-width: 1150px; /* Sesuaikan max-width */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-left {
+  flex: 1;
+  padding: 10px 80px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.login-left h2 {
+  font-size: 2rem;
+  color: #050505;
+  height: 1px;
+  font-weight: bold;
+}
+
+.login-left p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative; /* Untuk posisi tombol show/hide */
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-field:disabled {
+  background-color: #f0f0f0;
+}
+
+.input-error {
+  border-color: #ff4d4f;
+}
+
+.input-error-message {
+  color: #ff4d4f;
+  font-size: 0.875rem;
+}
+
+.input-icon {
+  margin-right: 10px;
+  color: #777;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4500b4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #303030;
+  text-decoration: none;
+  text-align: right;
+}
+
+password-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  right: 10px; /* Posisikan di sebelah kanan input */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.password-toggle:focus {
+  outline: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.login-right {
+  flex: 2;
+  /* width: 550px; */
+  border-radius: 15px; /* Ujung tumpul */
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling untuk container dengan ujung tumpul */
+.rounded-container {
+  /* background-color: #9e09a3; *Warna background dengan transparansi */
+  background: linear-gradient(#3a0077, #9501a8);
+  /* background: linear-gradient(90deg, #6a11cb, #2575fc); */
+  /* background: linear-gradient(135deg, #6a11cb, #2575fc); Gradasi ungu gelap ke ungu terang */
+  border-radius: 15px; /* Ujung tumpul */
+  padding: 20px;
+  text-align: center;
+  width: 90%; /* Sesuaikan lebar container */
+  max-width: 1500px; 
+  height: 550px; /**lebar container*/
+}
+
+.rounded-container h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.rounded-container h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+/*  */
+.login-image {
+  width: 60%; /* ukuran gambar */
+  max-width: 400px; /*ukuran maksimum */
+  height: auto;
+  padding: 0 0 20px 0; 
+  margin-bottom: 20px; /* Jarak gambar dan teks */
+  border-radius: 10px; /* border radius diperlukan */
+}
+.logo-white {
+  width: 80%; /* ukuran gambar */
+  max-width: 150px; /*ukuran maksimum */
+  height: auto;
+  padding: 0 0 30px 0; 
+}
+
+.logo-mediverse{
+  width: 80%; /* ukuran gambar */
+  max-width: 150px; /*ukuran maksimum */
+  height: auto;
+  padding: 40px; 
+  width: 100px; /* Sesuaikan ukuran logo */
+  margin-bottom: 20px
+}
+
+.login-right h1 {
+  font-size: 2rem;
+  font-family: 'Lucida Sans';
+
+  margin: 0;
+}
+
+.login-right h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Styling untuk Dashboard */
+.dashboard-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.dashboard-container p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin-top: 20px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.logout-button:hover {
+  background-color: #ff1a1a;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.875rem;
+  margin-top: 10px;
+  text-align: center;
 }
