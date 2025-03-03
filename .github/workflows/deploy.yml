@@ -3,7 +3,7 @@ name: CMS Mediverse Deploy to Vercel
 on:
   push:
     tags:
-      - '*'
+     - main
 
 jobs:
   deploy:
