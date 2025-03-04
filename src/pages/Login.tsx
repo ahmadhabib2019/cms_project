@@ -52,7 +52,7 @@ const Login: React.FC = () => {
       <img src={logomediverse} className="logo-mediverse" />
       </div>
       <div className="login-left">
-        <h2>Selamat Datang</h2>
+        <h2>Welcome to mediverse</h2>
         <p>Masuk dan kelola dashboard Mediverse Anda</p>
         <p></p>
         <form onSubmit={handleLogin}>
